@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+* {box-sizing: border-box}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: url("mum.jpg");
+	background-size: 100%;
+}
+
+.navbar {
+  width: 50%;
+  background-color: white;
+  overflow: auto;
+  margin-left: 25%;
+  margin-top: 2%;
+  border-radius: 10px;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+  display: block;
+}
+
+.navbar a:hover {
+  color: gray;
+}
+
+.navbar a:active {
+  color: gray;
+}
+ 
+.navbar .icon {
+  display: none;
+  color: black;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2%;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.footer a:hover {
+  color: gray;
+}
+
+.footer .email-container {
+  float: right;
+  padding: 1%;
+}
+
+.footer input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: line;
+  border-radius: 10px;
+}
+
+.footer .email-container button {
+  float: right;
+  padding: 6px;
+  margin: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.footer .email-container button:hover {
+  background: #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 50px;
+  background-color: white;
+  margin: 5%;
+  border-radius: 10px;
+}
+
+.grid-container > div {
+  text-align: left;
+  padding: 10%;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    top: 2%;
+    right: 20%;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+}
+
+</style> 
+</head>
+
+<body>
+<div class="navbar" id="myNavbar">
+  <a href="ikhome.html"><img src="ike.jpg" width="24.6" height="30"></a> 
+  <a href="gallery.html">Gallery</a> 
+  <a href="store.html">Store</a> 
+  <a href="basket.html"><i style='font-size:24px' class='fas'>&#xf07a;</i></a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="grid-container">
+  <div>
+ 	<p>Ikenaa.ltd &#169</p>
+	<p>Established 2017
+ 	<p>A company created to showcase creativity through Art, Design and Photography...</p>
+	<p>We believe in individuality and expressing oneself in a manner that allows the soul to speak.</p>
+ 	<p>Ikenaa is a journey of freedom <q>until everyone is free no one is free</q> - Shawn Corey Carter</p>
+ 	<p>We started this journey at a young age and its an honour to be able to share this reality with those willing to travel along with us.</p>
+ 	<p>Any content exhibited on this platform are original works created for Ikenaa.</p>
+	<p>Ikenaa is about establishing your own path.</p>
+	 </div>
+  <div><img src="ike.jpg" width=60%></div>
+</div>
+
+
+<div class="footer">
+  <a href><i style='font-size:24px' class='fab'>&#xf16d;</i></a>
+  <a href><i style='font-size:24px' class='fab'>&#xf099;</i></a>
+  <a href="https://www.youtube.com/user/iking1993"><i style='font-size:24px' class='fab'>&#xf167;</i></a>
+  <div class="email-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Email address" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+
+</body>
+
+
+</html>

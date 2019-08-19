@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+* {box-sizing: border-box}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: url("mum.jpg");
+	background-size: 100%;
+}
+
+.navbar {
+  width: 50%;
+  background-color: white;
+  overflow: auto;
+  margin-left: 25%;
+  margin-top: 2%;
+  border-radius: 10px;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+  top: 50%;
+}
+
+.navbar a:hover {
+  color: gray;
+}
+
+.navbar a:active {
+   color: gray;
+}
+
+
+.footer {
+  overflow: hidden;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  margin-top: 20%;
+  border-radius: 10px;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2%;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.footer a:hover {
+  color: gray;
+}
+
+.footer a.visited {
+  color: black;
+}
+
+.footer .email-container {
+  float: right;
+  padding: 1%;
+}
+
+.footer input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: line;
+  border-radius: 10px;
+}
+
+.footer .email-container button {
+  float: right;
+  padding: 6px;
+  margin: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.footer .email-container button:hover {
+  background: #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 5%;
+  padding: 5%;
+  border-radius: 10px;
+  padding-bottom: 10%;
+}
+
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 30px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 1s;
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: gray;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar a, footer a, {
+    float: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .grid-container > div {
+  display: grid;
+  grid-template-columns: 100%;
+  }
+}
+
+
+</style> 
+</head>
+
+<body>
+<div class="navbar">
+  <a href="ikHome.html"><img src="ike.jpg" width="24.6" height="30"></a> 
+  <a href="gallery.html">Gallery</a> 
+  <a href="store.html">Store</a> 
+  <a href="basket.html"><i style='font-size:24px' class='fas'>&#xf07a;</i></a>
+</div>
+
+<div class="grid-container" >
+  <div class="myImages"><img id="myImg" src="basket.jpg" alt="Basket" width="100%" onclick="openModal();currentSlide(1)"></div>
+  <div class="myImages"><img id="myImg" src="chide.jpg" alt="Chide" width="100%" onclick="openModal();currentSlide(2)"></div>
+  <div class="myImages"><img id="myImg" src="maluki.jpg" alt="Maluki" width="100%" onclick="openModal();currentSlide(3)"></div>
+  <div class="myImages"><img id="myImg" src="yg.jpg" alt="YG" width="100%" onclick="openModal();currentSlide(4)"></div>
+  <div class="myImages"><img id="myImg" src="mom.jpg" alt="GOAT" width="100%" onclick="openModal();currentSlide(5)"></div>
+  <div class="myImages"><img id="myImg" src="psg.jpg" alt="PSG" width="100%" onclick="openModal();currentSlide(6)"></div>
+  <div class="myImages"><img id="myImg" src="achebe.jpg" alt="Achebe" width="100%" onclick="openModal();currentSlide(7)"></div>
+  <div class="myImages"><img id="myImg" src="mj.jpg" alt="Dynamic Duo" width="100%" onclick="openModal();currentSlide(8)"></div>
+  <div class="myImages"><img id="myImg" src="chubie.jpg" alt="Choo" width="100%" onclick="openModal();currentSlide(9)"></div>
+  <div class="myImages"><img id="myImg" src="harry.jpg" alt="Friend" width="100%" onclick="openModal();currentSlide(10)"></div>
+  <div class="myImages"><img id="myImg" src="oj.jpg" alt="Superman" width="100%" onclick="openModal();currentSlide(11)"></div>
+  <div class="myImages"><img id="myImg" src="brits.jpg" alt="Stormzy" width="100%" onclick="openModal();currentSlide(1)"></div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides"><img src="img_nature_wide.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="basket.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="chide.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="maluki.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="yg.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="mom.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="psg.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="achebe.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="mj.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="chubie.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="harry.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="oj.jpg" style="width:100%"></div>
+    <div class="mySlides"><img src="brits.jpg" style="width:100%"></div>
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+</div>
+
+
+<div class="footer">
+  <a href><i style='font-size:24px' class='fab'>&#xf16d;</i></a>
+  <a href><i style='font-size:24px' class='fab'>&#xf099;</i></a>
+  <a href="https://www.youtube.com/user/iking1993"><i style='font-size:24px' class='fab'>&#xf167;</i></a>
+  <div class="email-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Email address" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>

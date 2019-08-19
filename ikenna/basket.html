@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+* {box-sizing: border-box}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: url("mum.jpg");
+	background-size: 100%;
+}
+
+.navbar {
+  width: 50%;
+  background-color: white;
+  overflow: auto;
+  margin-left: 25%;
+  margin-top: 2%;
+  border-radius: 10px;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+  top: 50%;
+}
+
+.navbar a:hover {
+  color: gray;
+}
+
+.navbar a:active {
+   color: gray;
+}
+
+
+.footer {
+  overflow: hidden;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  margin-top: 20%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2%;
+  text-decoration: none;
+  font-size: 25px;
+  bottom: 50px;
+}
+
+.footer a:hover {
+  color: gray;
+}
+
+.footer a.visited {
+  color: black;
+}
+
+.footer .email-container {
+  float: right;
+  padding: 1%;
+}
+
+.footer input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: line;
+  border-radius: 10px;
+}
+
+.footer .email-container button {
+  float: right;
+  padding: 6px;
+  margin: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.footer .email-container button:hover {
+  background: #ccc;
+}
+
+.bgimg {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+
+@media screen and (max-width: 500px) {
+  .navbar a, footer a, {
+    float: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+</style> 
+</head>
+
+<body>
+<div class="navbar">
+  <a href="ikHome.html"><img src="ike.jpg" width="24.6" height="30"></a> 
+  <a href="gallery.html">Gallery</a> 
+  <a href="store.html">Store</a> 
+  <a href="basket.html"><i style='font-size:24px' class='fas'>&#xf07a;</i></a>
+</div>
+
+<div class="bgimg">
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p>88 days left</p>
+  </div>
+</div>
+
+<div class="footer">
+  <a href><i style='font-size:24px' class='fab'>&#xf16d;</i></a>
+  <a href><i style='font-size:24px' class='fab'>&#xf099;</i></a>
+  <a href="https://www.youtube.com/user/iking1993"><i style='font-size:24px' class='fab'>&#xf167;</i></a>
+  <div class="email-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Email address" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+
+
+</html>
